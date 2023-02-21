@@ -4,8 +4,14 @@ export interface BuildPaths {
 		html: string
 }
 
-export interface BuildOptions {
-		mode: 'development' | 'production',
+type BuildMode = 'development' | 'production'
+
+export interface BuildEnv {
+		mode: BuildMode
+		port: number
+}
+
+export interface BuildOptions extends BuildEnv {
 		paths: BuildPaths
 		isDev: boolean
 }
