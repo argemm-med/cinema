@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '../layout'
-import { ROUTES } from '../../shared'
+import { ROUTES } from 'shared'
 
 export const router = createBrowserRouter([
 		{
@@ -9,6 +9,7 @@ export const router = createBrowserRouter([
 				children: [
 						{
 								index: true,
+								// element: <Loader/>,
 						},
 				],
 		},

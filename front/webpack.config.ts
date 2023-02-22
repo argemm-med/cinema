@@ -14,6 +14,7 @@ const config = ({ mode: modeEnv, port: portENV }: BuildEnv): webpack.Configurati
 				isDev,
 				port,
 				paths: {
+						src: resolve(__dirname, 'src'),
 						entry: resolve(__dirname, 'src', 'index.tsx'),
 						html: resolve(__dirname, 'public', 'index.html'),
 						build: resolve(__dirname, 'dist'),
