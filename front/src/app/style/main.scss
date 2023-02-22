@@ -1,7 +1,5 @@
 @import "reset";
 @import "variables";
-@import "dark-theme";
-@import "light-theme";
 
 body.lock {
   overflow: hidden;
@@ -11,4 +9,11 @@ body.lock {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+
+  background-color: var(--light-bg-primary);
+  color: var(--light-font-primary);
+
+  &.dark {
+    background-color: var(--dark-bg-accent);
+  }
 }

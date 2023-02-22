@@ -2,7 +2,7 @@ import { ThemeSwitcher } from 'shared/ui'
 import { useTheme } from 'shared/lib/providers'
 
 export const Header = () => {
-		const { theme, toggleTheme } = useTheme()
+		const { theme } = useTheme()
 
 		return (
 				<header className="header">
