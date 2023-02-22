@@ -1,31 +1,31 @@
+import styles from './notFound.module.scss'
+
 export const NotFound = () => {
 
 		return (
-
-				<main className="main">
-						test not found
+				<main className={ styles.main }>
+						<figure>
+								<div className={ styles['sad-mac'] }></div>
+								<figcaption>
+										<span className={ styles['sr-text'] }>Error 404: Not Found</span>
+										<span className={ styles.e }></span>
+										<span className={ styles.r }></span>
+										<span className={ styles.r }></span>
+										<span className={ styles.o }></span>
+										<span className={ styles.r }></span>
+										<span className={ styles._4 }></span>
+										<span className={ styles._0 }></span>
+										<span className={ styles._4 }></span>
+										<span className={ styles.n }></span>
+										<span className={ styles.o }></span>
+										<span className={ styles.t }></span>
+										<span className={ styles.f }></span>
+										<span className={ styles.o }></span>
+										<span className={ styles.u }></span>
+										<span className={ styles.n }></span>
+										<span className={ styles.d }></span>
+								</figcaption>
+						</figure>
 				</main>
-				// <figure>
-				// 		<div className={ stl['sad-mac'] }></div>
-				// 		<figcaption>
-				// 				<span className="sr-text">Error 404: Not Found</span>
-				// 				<span className="e"></span>
-				// 				<span className="r"></span>
-				// 				<span className="r"></span>
-				// 				<span className="o"></span>
-				// 				<span className="r"></span>
-				// 				<span className="_4"></span>
-				// 				<span className="_0"></span>
-				// 				<span className="_4"></span>
-				// 				<span className="n"></span>
-				// 				<span className="o"></span>
-				// 				<span className="t"></span>
-				// 				<span className="f"></span>
-				// 				<span className="o"></span>
-				// 				<span className="u"></span>
-				// 				<span className="n"></span>
-				// 				<span className="d"></span>
-				// 		</figcaption>
-				// </figure>
 		)
 }
