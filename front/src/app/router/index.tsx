@@ -1,6 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '../layout'
-import { ROUTES } from 'shared'
+import { lazy } from 'react'
+import { ROUTES } from 'shared/config'
+
+const Home = lazy(() =>
+		import('../../pages').then(({ Home }) => ({ default: Home })))
+const NotFound = lazy(() =>
+		import('../../pages').then(({ NotFound }) => ({ default: NotFound })))
 
 export const router = createBrowserRouter([
 		{
@@ -9,8 +15,12 @@ export const router = createBrowserRouter([
 				children: [
 						{
 								index: true,
-								// element: <Loader/>,
+								element: <Home/>,
 						},
 				],
+		},
+		{
+				path: ROUTES.notFound,
+				element: <NotFound/>,
 		},
 ])

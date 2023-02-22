@@ -1,3 +1,4 @@
-export const ROUTES = Object.freeze({
-		home: '/',
-})
+export enum ROUTES {
+		home = '/',
+		notFound = '/not'
+}

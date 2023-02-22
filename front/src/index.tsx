@@ -1,7 +1,9 @@
-import { render } from 'react-dom'
-import { App } from './app/App'
+import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
+import { App } from 'app/App'
 
-render(
-		<App/>,
-		document.getElementById('root'),
+createRoot(document.getElementById('root') as HTMLElement).render(
+		<StrictMode>
+				<App/>
+		</StrictMode>,
 )
