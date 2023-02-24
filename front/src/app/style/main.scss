@@ -10,9 +10,9 @@ body.lock {
   width: 100%;
   overflow-x: hidden;
 
-  @extend %theme-light--primary;
+  @include light-primary;
 
   &.dark {
-    @extend %theme-dark--primary
+    @include dark-primary;
   }
 }

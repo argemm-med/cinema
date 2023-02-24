@@ -1,0 +1,13 @@
+@import "../../../app/style/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  @include light-secondary;
+}
+
+.dark {
+  @include dark-secondary;
+}
