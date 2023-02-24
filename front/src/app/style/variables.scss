@@ -20,6 +20,36 @@
   --light-font-accent: #fff;
 }
 
+%theme-light--primary {
+  background-color: var(--light-bg-primary);
+  color: var(--light-font-primary);
+}
+
+%theme-light--secondary {
+  background-color: var(--light-bg-secondary);
+  color: var(--light-font-secondary);
+}
+
+%theme-light--accent {
+  background-color: var(--light-bg-accent);
+  color: var(--light-font-accent);
+}
+
+%theme-dark--primary {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-font-primary);
+}
+
+%theme-dark--secondary {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-font-secondary);
+}
+
+%theme-dark--accent {
+  background-color: var(--dark-bg-accent);
+  color: var(--dark-font-accent);
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;

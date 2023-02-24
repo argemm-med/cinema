@@ -10,11 +10,9 @@ body.lock {
   width: 100%;
   overflow-x: hidden;
 
-  background-color: var(--light-bg-primary);
-  color: var(--light-font-primary);
+  @extend %theme-light--primary;
 
   &.dark {
-    background-color: var(--dark-bg-primary);
-    color: var(--dark-font-primary);
+    @extend %theme-dark--primary
   }
 }
