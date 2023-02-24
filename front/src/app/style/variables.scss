@@ -1,19 +1,23 @@
 :root {
   font-size: 16px;
 
-  --dark-bg-primary: #f0f0f0;
-  --dark-font-primary: #f0f0f0;
-  --dark-bg-accent: #1976d2;
-  --dark-font-accent: #fff;
-  --dark-bg-secondary: #fefbe5;
-  --dark-font-secondary: #757575;
+  --dark-bg-primary: #2a323d;
+  --dark-font-primary: #fff;
+
+  --dark-bg-secondary: #20262e;
+  --dark-font-secondary: #a6a8ab;
+
+  --dark-bg-accent: #56bdff;
+  --dark-font-accent: #151515;
 
   --light-bg-primary: #fefbe5;
   --light-font-primary: #000;
-  --light-bg-accent: #1976d2;
-  --light-font-accent: #fff;
+
   --light-bg-secondary: #f0f0f0;
   --light-font-secondary: #757575;
+
+  --light-bg-accent: #1976d2;
+  --light-font-accent: #fff;
 }
 
 .container {
