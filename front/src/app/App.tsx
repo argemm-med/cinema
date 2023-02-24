@@ -8,13 +8,13 @@ import { ThemeProvider } from 'shared/lib/providers'
 import './style/main.scss'
 
 export const App = () => {
-		return (
-				<>
-						<Suspense fallback={ <Loader/> }>
-								<ThemeProvider>
-										<RouterProvider router={ router }/>
-								</ThemeProvider>
-						</Suspense>
-				</>
-		)
+	return (
+		<>
+			<Suspense fallback={<Loader/>}>
+				<ThemeProvider>
+					<RouterProvider router={router}/>
+				</ThemeProvider>
+			</Suspense>
+		</>
+	)
 }

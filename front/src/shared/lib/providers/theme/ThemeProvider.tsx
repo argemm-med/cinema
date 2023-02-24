@@ -1,30 +1,29 @@
 import {
-		LOCAL_STORAGE_THEME_KEY,
-		THEME,
-		ThemeContext,
-		ThemeContextProps,
+	LOCAL_STORAGE_THEME_KEY,
+	THEME,
+	ThemeContext,
+	type ThemeContextProps
 } from 'shared/lib/providers/theme/ThemeContext'
-import { FC, PropsWithChildren, useMemo, useState } from 'react'
+import { type FC, type PropsWithChildren, useMemo, useState } from 'react'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as THEME || THEME.dark
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-		const [ theme, setTheme ] = useState<THEME>(defaultTheme)
+	const [ theme, setTheme ] = useState<THEME>(defaultTheme)
 
-		const toggleTheme = () => {
-				const newTheme = theme === THEME.dark ? THEME.light : THEME.dark
-				setTheme(newTheme)
-				localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
-		}
+	const toggleTheme = () => {
+		const newTheme = theme === THEME.dark ? THEME.light : THEME.dark
+		setTheme(newTheme)
+		localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
+	}
 
-		const contextValue = useMemo<ThemeContextProps>(() => ({
-				theme, toggleTheme,
-		}), [ theme ])
+	const contextValue = useMemo<ThemeContextProps>(() => ({
+		theme, toggleTheme
+	}), [ theme ])
 
-
-		return (
-				<ThemeContext.Provider value={ contextValue }>
-						{ children }
-				</ThemeContext.Provider>
-		)
+	return (
+		<ThemeContext.Provider value={contextValue}>
+			{children}
+		</ThemeContext.Provider>
+	)
 }
