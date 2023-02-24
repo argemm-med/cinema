@@ -7,15 +7,17 @@
   position: fixed;
   left: 0;
   top: 0;
+
   @include same-size(100%);
+
   display: flex;
   z-index: 1;
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
 }
 
 .loader {
   --sz: 7rem;
+
   width: calc(var(--sz) * 2);
   height: var(--sz);
   margin: auto;
@@ -25,6 +27,7 @@
 
 .loader__sq {
   --p-sz: calc(var(--sz) / 4);
+
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -35,6 +38,7 @@
   &::before,
   &::after {
     @include same-size(var(--p-sz));
+
     content: "";
     position: relative;
     transform: translateY(calc((var(--sz) - var(--p-sz)) * -1));
@@ -47,12 +51,14 @@
 
     &::before {
       --i: 2;
+
       border: 3px solid #82e8d3;
       box-shadow: 0 0 20px #82e8d3;
     }
 
     &::after {
       --i: 1;
+
       border: 3px solid #ff7ab5;
       box-shadow: 0 0 20px #ff7ab5;
       border-radius: 50%;
@@ -64,8 +70,10 @@
 
     &::before {
       --i: 3;
+
       background-color: #c643fb;
       display: inline-block;
+
       @supports (clip-path: circle()) {
         clip-path: polygon(9% 0, 0 10%, 40% 51%, 0 89%, 8% 100%, 50% 60%, 93% 100%, 100% 90%, 60% 52%, 100% 9%, 93% 0, 50% 40%);
       }
@@ -73,6 +81,7 @@
 
     &::after {
       --i: 4;
+
       background-color: #2fe2dd;
       border-radius: 50%;
       top: -1px;
@@ -85,9 +94,9 @@
   }
 
   &:nth-of-type(3) {
-
     &::before {
       --i: 2;
+
       border: 3px solid #ffb650;
       box-shadow: 0 0 20px #ffb650;
     }

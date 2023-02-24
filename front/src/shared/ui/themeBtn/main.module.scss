@@ -14,6 +14,7 @@
   --height-of-switch: 2em;
   --size-of-icon: 1.4em;
   --slider-offset: 0.3em;
+
   position: relative;
   width: var(--width-of-switch);
   height: var(--height-of-switch);
@@ -22,7 +23,7 @@
 
 .checkboxWrapper .slider {
   position: absolute;
-  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  box-shadow: rgb(0 0 0 / 16%) 0 3px 6px, rgb(0 0 0 / 23%) 0 3px 6px;
   cursor: pointer;
   top: 0;
   left: 0;
@@ -33,7 +34,7 @@
   border-radius: 30px;
 }
 
-.checkboxWrapper .slider:before {
+.checkboxWrapper .slider::before {
   position: absolute;
   content: "";
   height: var(--size-of-icon, 1.4em);
@@ -50,7 +51,7 @@
   background-color: #303136;
 }
 
-.checkboxWrapper input:checked + .slider:before {
+.checkboxWrapper input:checked + .slider::before {
   left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
   background: #303136;
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
