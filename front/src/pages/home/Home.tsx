@@ -1,4 +1,4 @@
-import { Input, Button } from 'shared/ui'
+import { Input, Button, Card } from 'shared/ui'
 import { useState } from 'react'
 
 export const Home = () => {
@@ -14,6 +14,10 @@ export const Home = () => {
 			       error={true}/>
 			<Button label="test test button"
 			        type="long"/>
+			<Card>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt eaque eveniet expedita inventore
+				nihil non optio repudiandae sed tenetur?
+			</Card>
 		</div>
 	)
 }

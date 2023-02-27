@@ -1,0 +1,13 @@
+@import '../../../app/style/variables';
+
+.card {
+  border-radius: var(--radius-s);
+  padding: 25px;
+  margin: var(--margin-x) 0;
+
+  @include light-secondary;
+
+  &.dark {
+    @include dark-secondary;
+  }
+}
