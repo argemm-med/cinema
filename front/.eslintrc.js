@@ -17,16 +17,18 @@ module.exports = {
 		'react'
 	],
 	rules: {
+		// --------------------- common
 		'array-bracket-spacing': [ 'error', 'always' ],
 		indent: [ 'error', 'tab' ],
-		'no-tabs': 0,
-		'react/jsx-uses-react': 'off',
+		'no-tabs': 'off',
+		'no-mixed-spaces-and-tabs': 'off',
+		// --------------------- react
 		'react/react-in-jsx-scope': 'off',
-		'@typescript-eslint/explicit-function-return-type': 1,
+		// --------------------- typescript
+		'@typescript-eslint/explicit-function-return-type': 'warn',
+		'@typescript-eslint/no-confusing-void-expression': 'warn',
 		'@typescript-eslint/indent': [ 'error', 'tab' ],
-		'@typescript-eslint/prefer-nullish-coalescing': 0,
-		'@typescript-eslint/strict-boolean-expressions': 0,
-		'react/jsx-indent': [ 'error', 'tab' ],
-		'react/jsx-indent-props': [ 'error', 4 ]
+		'@typescript-eslint/prefer-nullish-coalescing': 'off',
+		'@typescript-eslint/strict-boolean-expressions': 'off'
 	}
 }

@@ -1,0 +1,83 @@
+@import "../../../app/style/variables";
+
+$padding: 1rem;
+$height: 50px;
+
+.wrapper {
+  height: $height;
+  position: relative;
+  margin: var(--margin-s);
+  display: flex;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  display: inline;
+  height: $height;
+  padding: 0.8rem;
+  position: absolute;
+  transition: 120ms all ease-in;
+  border-radius: var(--radius-s);
+
+  @include light-secondary;
+
+  &.dark {
+    @include dark-secondary;
+  }
+}
+
+.input {
+  height: $height;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: var(--radius-s);
+  padding: $padding;
+  position: absolute;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: all 120ms ease-in;
+
+  @include light-secondary;
+
+  &.dark {
+    @include dark-secondary;
+  }
+
+  &.errorInput {
+    box-shadow: var(--error) 0 3px 10px, var(--error) 0 2px 5px;
+  }
+
+  &:focus + .label, &:active + .label {
+    font-size: 0.9rem;
+    transform: translateY(-25);
+    top: -8px;
+    padding: 1px $padding;
+    height: auto;
+  }
+
+  &:not(:placeholder-shown) + .label {
+    font-size: 0.9rem;
+    transform: translateY(-25);
+    top: -7px;
+    padding: 1px $padding;
+    height: auto;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: $padding;
+  z-index: 10;
+
+  & svg {
+    transform: scale(1.5);
+  }
+}
