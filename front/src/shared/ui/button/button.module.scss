@@ -1,0 +1,47 @@
+@import '../../../app/style/variables';
+
+.button {
+  margin: var(--margin-x);
+  font-family: var(--font-mono);
+  align-items: center;
+  appearance: none;
+  border-radius: var(--radius-s);
+  border-width: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .35s;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 1.1rem;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @include light-secondary;
+
+  &.long {
+    width: 100%;
+  }
+
+  &.dark {
+    @include dark-accent;
+  }
+}

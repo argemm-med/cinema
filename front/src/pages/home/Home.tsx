@@ -1,4 +1,4 @@
-import { Input } from 'shared/ui/input/Input'
+import { Input, Button } from 'shared/ui'
 import { useState } from 'react'
 
 export const Home = () => {
@@ -12,6 +12,8 @@ export const Home = () => {
 				       setInputValue(value)
 			       }}
 			       error={true}/>
+			<Button label="test test button"
+			        type="long"/>
 		</div>
 	)
 }
