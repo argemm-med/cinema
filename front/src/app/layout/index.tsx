@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
-import { Header } from 'widgets/ui'
 import { useTheme } from 'shared/lib/providers'
+import { Header } from 'widgets'
 
 export const Layout = () => {
 	const { theme } = useTheme()

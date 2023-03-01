@@ -1,6 +1,8 @@
 import styles from './button.module.scss'
-import { type FC } from 'react'
+import type { FC } from 'react'
 import { THEME, useTheme } from 'shared/lib/providers'
+
+// type ButtonProps2 = ComponentPropsWithRef<'button'>
 
 interface ButtonProps {
 	label: string

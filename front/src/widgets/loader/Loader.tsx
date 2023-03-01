@@ -1,4 +1,4 @@
-import stl from './Loader.module.scss'
+import stl from './loader.module.scss'
 
 export const Loader = () => {
 	return (

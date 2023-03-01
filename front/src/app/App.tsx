@@ -2,7 +2,7 @@ import { RouterProvider } from 'react-router-dom'
 import { Suspense } from 'react'
 
 import { router } from './router'
-import { Loader } from 'widgets/ui'
+import { Loader } from 'widgets'
 import { ThemeProvider } from 'shared/lib/providers'
 
 import './style/main.scss'
