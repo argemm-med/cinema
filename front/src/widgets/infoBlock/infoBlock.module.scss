@@ -1,2 +1,67 @@
+@import "../../app/style/variables";
+
 .wrapper {
+  background-color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: rgb(6 24 44 / 40%) 0 0 0 2px, rgb(6 24 44 / 65%) 0 4px 6px -1px, rgb(255 255 255 / 8%) 0 1px 0 inset;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  border-radius: var(--radius-x);
+  min-width: 250px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-2000px);
+
+  @include light-primary;
+
+  &.dark {
+    @include dark-primary;
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.icon {
+  height: 30px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  & svg path {
+    fill: #2fe2dd;
+  }
+
+  &.error {
+    background-image: url("./success.svg");
+  }
+
+  &.success {
+    background-image: url("./success.svg");
+  }
+
+  &.info {
+    background-image: url("./success.svg");
+  }
+}
+
+.content {
+  font-family: var(--font-mono);
+  flex-grow: 1;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.description {
+  line-height: 1.5;
 }

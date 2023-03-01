@@ -11,10 +11,15 @@ body.lock {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
   @include light-primary;
 
   &.dark {
     @include dark-primary;
   }
+}
+
+.main {
+  flex-grow: 1;
 }
